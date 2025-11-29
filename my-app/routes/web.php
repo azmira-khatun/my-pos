@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UnitController;
-
+use App\Http\Controllers\CurrencyController;
 Route::get('/', function () {
     return view('portal');
 });
@@ -15,3 +15,5 @@ Route::get('/dashboard', function () {
 
 // unit start
 Route::resource('units', UnitController::class);
+// Currency start
+Route::resource('currencies', CurrencyController::class);

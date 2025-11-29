@@ -52,6 +52,17 @@
                 </li>
 
 
+{{-- Currencies (কারেন্সি) মডিউল --}}
+<li class="nav-item">
+    {{-- route('currencies.index') ব্যবহার করা হয়েছে --}}
+    <a href="{{ route('currencies.index') }}" class="nav-link @if(request()->routeIs('currencies.*')) active @endif">
+        <i class="nav-icon fas fa-money-bill-wave"></i>
+        <p>Currencies</p>
+    </a>
+</li>
+
+
+
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-chart-line"></i>
