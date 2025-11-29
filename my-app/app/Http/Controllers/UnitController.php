@@ -70,6 +70,6 @@ class UnitController extends Controller
     }
 
     // create() এবং edit() মেথডগুলি ফর্ম দেখানোর জন্য ব্যবহৃত হবে, প্রয়োজন অনুযায়ী যোগ করুন।
-    public function create() { return view('units.create'); }
+    public function create() { return view('pages.units.create'); }
     public function edit(Unit $unit) { return view('pages.units.edit', compact('unit')); }
 }

@@ -13,7 +13,7 @@ class CurrencyController extends Controller
     public function index()
     {
         $currencies = Currency::all();
-        return view('currencies.index', compact('currencies'));
+        return view('pages.currencies.index', compact('currencies'));
     }
 
     /**
@@ -39,7 +39,7 @@ class CurrencyController extends Controller
      */
     public function show(Currency $currency)
     {
-        return view('currencies.show', compact('currency'));
+        return view('pages.currencies.show', compact('currency'));
     }
 
     /**
@@ -72,6 +72,6 @@ class CurrencyController extends Controller
     }
 
     // create() এবং edit() মেথডগুলি ফর্ম দেখানোর জন্য
-    public function create() { return view('currencies.create'); }
-    public function edit(Currency $currency) { return view('currencies.edit', compact('currency')); }
+    public function create() { return view('pages.currencies.create'); }
+    public function edit(Currency $currency) { return view('pages.currencies.edit', compact('currency')); }
 }
