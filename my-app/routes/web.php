@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UnitController;
 use App\Http\Controllers\CurrencyController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ExpenseCategoryController;
 
 
 
@@ -26,3 +27,5 @@ Route::resource('currencies', CurrencyController::class);
 
 // Category start
 Route::resource('categories', CategoryController::class);
+// ExpenseCategory
+Route::resource('expense_categories', ExpenseCategoryController::class);

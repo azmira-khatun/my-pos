@@ -73,6 +73,16 @@
 </li>
 
 
+{{-- Expense Categories (খরচের ক্যাটেগরি) মডিউল --}}
+<li class="nav-item">
+    {{-- route('expense_categories.index') ব্যবহার করা হয়েছে --}}
+    <a href="{{ route('expense_categories.index') }}" class="nav-link @if(request()->routeIs('expense_categories.*')) active @endif">
+        <i class="nav-icon fas fa-folder-open"></i>
+        <p>Expense Categories</p>
+    </a>
+</li>
+
+
 
                 <li class="nav-item">
                     <a href="#" class="nav-link">
