@@ -3,6 +3,12 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UnitController;
 use App\Http\Controllers\CurrencyController;
+use App\Http\Controllers\CategoryController;
+
+
+
+
+
 Route::get('/', function () {
     return view('portal');
 });
@@ -17,3 +23,6 @@ Route::get('/dashboard', function () {
 Route::resource('units', UnitController::class);
 // Currency start
 Route::resource('currencies', CurrencyController::class);
+
+// Category start
+Route::resource('categories', CategoryController::class);

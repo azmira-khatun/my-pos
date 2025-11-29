@@ -63,6 +63,17 @@
 
 
 
+{{-- Categories (ক্যাটেগরি) মডিউল --}}
+<li class="nav-item">
+    {{-- route('categories.index') ব্যবহার করা হয়েছে --}}
+    <a href="{{ route('categories.index') }}" class="nav-link @if(request()->routeIs('categories.*')) active @endif">
+        <i class="nav-icon fas fa-tags"></i>
+        <p>Categories</p>
+    </a>
+</li>
+
+
+
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-chart-line"></i>
