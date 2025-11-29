@@ -95,6 +95,18 @@
 
 
 
+
+
+{{-- সিস্টেম সেটিংস মডিউল --}}
+<li class="nav-item">
+    <a href="{{ route('settings.index') }}" class="nav-link @if(request()->routeIs('settings.*')) active @endif">
+        <i class="nav-icon fas fa-cog"></i>
+        <p>System Settings</p>
+    </a>
+</li>
+
+
+
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-chart-line"></i>

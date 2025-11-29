@@ -18,7 +18,7 @@ class SettingController extends Controller
         $settings = Setting::getSettings();
         $currencies = Currency::all();
 
-        return view('settings.index', compact('settings', 'currencies'));
+        return view('pages.settings.index', compact('settings', 'currencies'));
     }
 
     /**

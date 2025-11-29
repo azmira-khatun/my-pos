@@ -6,6 +6,7 @@ use App\Http\Controllers\CurrencyController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ExpenseCategoryController;
 use App\Http\Controllers\ExpenseController;
+use App\Http\Controllers\SettingController;
 
 
 
@@ -34,3 +35,7 @@ Route::resource('expense_categories', ExpenseCategoryController::class);
 // expense start
 
 Route::resource('expenses', ExpenseController::class);
+
+// Setting start
+Route::get('settings', [SettingController::class, 'index'])->name('settings.index');
+Route::put('settings', [SettingController::class, 'update'])->name('settings.update');
