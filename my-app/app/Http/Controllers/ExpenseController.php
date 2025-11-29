@@ -15,7 +15,7 @@ class ExpenseController extends Controller
     {
         // Category এর সাথে লোড করা হলো
         $expenses = Expense::with('category')->latest()->get();
-        return view('expenses.index', compact('expenses'));
+        return view('pages.expenses.index', compact('expenses'));
     }
 
     /**
@@ -24,7 +24,7 @@ class ExpenseController extends Controller
     public function create()
     {
         $categories = ExpenseCategory::all(); // ক্যাটেগরি ড্রপডাউনের জন্য
-        return view('expenses.create', compact('categories'));
+        return view('pages.expenses.create', compact('categories'));
     }
 
     /**
@@ -52,7 +52,7 @@ class ExpenseController extends Controller
     public function edit(Expense $expense)
     {
         $categories = ExpenseCategory::all(); // ক্যাটেগরি ড্রপডাউনের জন্য
-        return view('expenses.edit', compact('expense', 'categories'));
+        return view('pages.expenses.edit', compact('expense', 'categories'));
     }
 
     /**
@@ -89,6 +89,6 @@ class ExpenseController extends Controller
     public function show(Expense $expense)
     {
         $expense->load('category');
-        return view('expenses.show', compact('expense'));
+        return view('pages.expenses.show', compact('expense'));
     }
 }

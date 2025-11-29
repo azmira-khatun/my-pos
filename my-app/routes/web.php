@@ -5,6 +5,7 @@ use App\Http\Controllers\UnitController;
 use App\Http\Controllers\CurrencyController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ExpenseCategoryController;
+use App\Http\Controllers\ExpenseController;
 
 
 
@@ -29,3 +30,7 @@ Route::resource('currencies', CurrencyController::class);
 Route::resource('categories', CategoryController::class);
 // ExpenseCategory
 Route::resource('expense_categories', ExpenseCategoryController::class);
+
+// expense start
+
+Route::resource('expenses', ExpenseController::class);

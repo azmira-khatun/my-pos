@@ -73,6 +73,17 @@
 </li>
 
 
+
+{{-- Expenses (খরচ) মডিউল --}}
+<li class="nav-item">
+    {{-- route('expenses.index') ব্যবহার করা হয়েছে --}}
+    <a href="{{ route('expenses.index') }}" class="nav-link @if(request()->routeIs('expenses.*')) active @endif">
+        <i class="nav-icon fas fa-file-invoice-dollar"></i>
+        <p>Expenses</p>
+    </a>
+</li>
+
+
 {{-- Expense Categories (খরচের ক্যাটেগরি) মডিউল --}}
 <li class="nav-item">
     {{-- route('expense_categories.index') ব্যবহার করা হয়েছে --}}
