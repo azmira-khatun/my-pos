@@ -43,6 +43,15 @@
                 </li>
 
 
+
+                <li class="nav-item">
+                    <a href="{{ route('units.index') }}" class="nav-link @if(request()->routeIs('units.*')) active @endif">
+                        <i class="nav-icon fas fa-balance-scale"></i>
+                        <p>Units</p>
+                    </a>
+                </li>
+
+
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-chart-line"></i>
