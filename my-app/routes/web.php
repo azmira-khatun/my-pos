@@ -19,6 +19,7 @@ use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\AdjustedProductController;
 use App\Http\Controllers\PurchaseController;
 use App\Http\Controllers\PurchaseItemController;
+use App\Http\Controllers\PurchasePaymentController;
 
 
 Route::get('/', function () {
@@ -90,3 +91,14 @@ Route::post('purchases/{purchase}/items', [PurchaseItemController::class, 'store
 Route::delete('purchase_details/{purchaseDetail}', [PurchaseItemController::class, 'destroy'])
     ->name('purchase_details.destroy');
 
+
+// Purchase Payment Management Routes
+// store: একটি নির্দিষ্ট ক্রয়ের জন্য একটি নতুন পেমেন্ট যোগ করা
+Route::post('purchases/{purchase}/payments', [PurchasePaymentController::class, 'store'])
+    ->name('purchases.payments.store');
+
+// destroy: একটি নির্দিষ্ট পেমেন্ট এন্ট্রি মুছে ফেলা (PurchasePayment মডেল আইডি ব্যবহার করে)
+Route::delete('purchase_payments/{purchasePayment}', [PurchasePaymentController::class, 'destroy'])
+    ->name('purchase_payments.destroy');
+
+// ... (আপনার অন্য routes, যেমন Route::resource('purchases', PurchaseController::class);)
