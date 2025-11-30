@@ -10,6 +10,7 @@ use App\Http\Controllers\SettingController;
 use App\Http\Controllers\RoleController;
 
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CustomerController;
 
 
 
@@ -47,3 +48,11 @@ Route::put('settings', [SettingController::class, 'update'])->name('settings.upd
 Route::resource('users', UserController::class);
 // role start
 Route::resource('roles', RoleController::class);
+
+
+// customer start
+
+Route::resource('customers', CustomerController::class);
+
+
+

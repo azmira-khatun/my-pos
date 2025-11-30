@@ -88,6 +88,12 @@
                         <p>Categories</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                <a class="nav-link {{ request()->routeIs('customers.*') ? 'active' : '' }}" href="{{ route('customers.index') }}">
+                    <i class="bi bi-people-fill"></i>
+                  Customer
+                </a>
+            </li>
 
 
 
