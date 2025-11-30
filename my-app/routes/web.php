@@ -17,6 +17,8 @@ use App\Http\Controllers\AdjustmentController;
 use App\Http\Controllers\SupplierController;
 
 use App\Http\Controllers\AdjustedProductController;
+use App\Http\Controllers\PurchaseController;
+use App\Http\Controllers\PurchaseItemController;
 
 
 Route::get('/', function () {
@@ -74,3 +76,17 @@ Route::resource('adjusted_products', AdjustedProductController::class);
 // ... আপনার অন্য routes ...
 
 Route::resource('adjustments', AdjustmentController::class);
+
+// Purchase
+
+Route::resource('purchases', PurchaseController::class);
+
+// Purchase Item Management Routes
+// store: একটি নির্দিষ্ট ক্রয়ের মধ্যে একটি নতুন আইটেম যোগ করা
+Route::post('purchases/{purchase}/items', [PurchaseItemController::class, 'store'])
+    ->name('purchases.items.store');
+
+// destroy: একটি নির্দিষ্ট আইটেম মুছে ফেলা (PurchaseDetail মডেল আইডি ব্যবহার করে)
+Route::delete('purchase_details/{purchaseDetail}', [PurchaseItemController::class, 'destroy'])
+    ->name('purchase_details.destroy');
+

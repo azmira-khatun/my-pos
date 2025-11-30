@@ -145,6 +145,13 @@
                     </a>
                 </li>
 
+                <li class="nav-item">
+                <a class="nav-link {{ request()->routeIs('purchases.*') ? 'active' : '' }}" href="{{ route('purchases.index') }}">
+                    <i class="bi bi-bag-plus-fill"></i>
+                    Purchases
+                </a>
+            </li>
+
 
 
 
