@@ -95,6 +95,18 @@
                 </a>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link {{ request()->routeIs('suppliers.*') ? 'active' : '' }}" href="{{ route('suppliers.index') }}">
+                    <i class="bi bi-truck"></i>
+                    Suppliers
+                </a>
+            </li>
+<li class="nav-item">
+                <a class="nav-link {{ request()->routeIs('products.*') ? 'active' : '' }}" href="{{ route('products.index') }}">
+                    <i class="bi bi-box-seam-fill"></i>
+                    Products
+                </a>
+            </li>
 
 
                 {{-- Expenses (খরচ) মডিউল --}}

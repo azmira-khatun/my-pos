@@ -11,7 +11,9 @@ use App\Http\Controllers\RoleController;
 
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\ProductController;
 
+use App\Http\Controllers\SupplierController;
 
 
 
@@ -55,4 +57,10 @@ Route::resource('roles', RoleController::class);
 Route::resource('customers', CustomerController::class);
 
 
+// supplier start
 
+Route::resource('suppliers', SupplierController::class);
+
+//product
+
+Route::resource('products', ProductController::class);
