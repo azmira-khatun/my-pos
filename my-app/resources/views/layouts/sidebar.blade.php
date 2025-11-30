@@ -109,6 +109,21 @@
             </li>
 
 
+
+<li class="nav-item">
+                <a class="nav-link {{ request()->routeIs('adjustments.*') ? 'active' : '' }}" href="{{ route('adjustments.index') }}">
+                    <i class="bi bi-list-columns"></i>
+                    Adjustments
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{ request()->routeIs('adjusted_products.*') ? 'active' : '' }}" href="{{ route('adjusted_products.index') }}">
+                    <i class="bi bi-arrow-left-right"></i>
+                    Adjustment Entries
+                </a>
+            </li>
+
+
                 {{-- Expenses (খরচ) মডিউল --}}
                 <li class="nav-item">
                     {{-- route('expenses.index') ব্যবহার করা হয়েছে --}}

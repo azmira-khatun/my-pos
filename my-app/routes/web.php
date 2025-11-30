@@ -12,9 +12,11 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\AdjustmentController;
 
 use App\Http\Controllers\SupplierController;
 
+use App\Http\Controllers\AdjustedProductController;
 
 
 Route::get('/', function () {
@@ -64,3 +66,11 @@ Route::resource('suppliers', SupplierController::class);
 //product
 
 Route::resource('products', ProductController::class);
+
+// AdjustedProduct
+
+Route::resource('adjusted_products', AdjustedProductController::class);
+
+// ... আপনার অন্য routes ...
+
+Route::resource('adjustments', AdjustmentController::class);
