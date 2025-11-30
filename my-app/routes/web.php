@@ -7,6 +7,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ExpenseCategoryController;
 use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\SettingController;
+use App\Http\Controllers\MigrationLogController;
 
 
 
@@ -39,3 +40,8 @@ Route::resource('expenses', ExpenseController::class);
 // Setting start
 Route::get('settings', [SettingController::class, 'index'])->name('settings.index');
 Route::put('settings', [SettingController::class, 'update'])->name('settings.update');
+// routes/api.php
+
+
+// migration start
+Route::get('/migration-history', [MigrationLogController::class, 'index']);

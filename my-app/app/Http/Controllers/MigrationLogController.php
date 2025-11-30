@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\MigrationLog; // Make sure this Model class exists
+use App\Models\MigrationLog;
 use Illuminate\Http\Request;
-use Illuminate\Http\JsonResponse; // Use this for better type hinting (optional but good practice)
+use Illuminate\View\View; // Use View for the index method's return type
 
 class MigrationLogController extends Controller
 {
@@ -12,24 +12,21 @@ class MigrationLogController extends Controller
      * Display a listing of the system migration logs.
      * Fetches data from the 'migrations' table via the MigrationLog Model.
      *
-     * @return \Illuminate\Http\JsonResponse
+     * @return View // Type hint in comment updated to View
      */
-    public function index(): JsonResponse
+    public function index(): View // Type declaration updated to View
     {
         // Retrieve all records from the 'migrations' table
         $logs = MigrationLog::all();
 
-        return response()->json([
-            'message' => 'System Migration History',
-            'total_migrations' => $logs->count(),
-            'data' => $logs
-        ]);
+        // Pass the data ($logs) to the Blade file
+        return view('migration_logs.index', compact('logs'));
     }
 
     /*
     public function show(string $id): JsonResponse
     {
-        // Note: findOrFail will throw an exception if the ID is not found (a 404 response)
+        // Note: This method still correctly returns a JsonResponse
         $log = MigrationLog::findOrFail($id); 
         return response()->json($log);
     }

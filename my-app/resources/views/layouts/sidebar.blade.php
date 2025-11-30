@@ -45,65 +45,79 @@
 
 
                 <li class="nav-item">
-                    <a href="{{ route('units.index') }}" class="nav-link @if(request()->routeIs('units.*')) active @endif">
+                    <a href="{{ route('units.index') }}"
+                        class="nav-link @if(request()->routeIs('units.*')) active @endif">
                         <i class="nav-icon fas fa-balance-scale"></i>
                         <p>Units</p>
                     </a>
                 </li>
 
 
-{{-- Currencies (কারেন্সি) মডিউল --}}
-<li class="nav-item">
-    {{-- route('currencies.index') ব্যবহার করা হয়েছে --}}
-    <a href="{{ route('currencies.index') }}" class="nav-link @if(request()->routeIs('currencies.*')) active @endif">
-        <i class="nav-icon fas fa-money-bill-wave"></i>
-        <p>Currencies</p>
-    </a>
-</li>
+                {{-- Currencies (কারেন্সি) মডিউল --}}
+                <li class="nav-item">
+                    {{-- route('currencies.index') ব্যবহার করা হয়েছে --}}
+                    <a href="{{ route('currencies.index') }}"
+                        class="nav-link @if(request()->routeIs('currencies.*')) active @endif">
+                        <i class="nav-icon fas fa-money-bill-wave"></i>
+                        <p>Currencies</p>
+                    </a>
+                </li>
 
 
 
-{{-- Categories (ক্যাটেগরি) মডিউল --}}
-<li class="nav-item">
-    {{-- route('categories.index') ব্যবহার করা হয়েছে --}}
-    <a href="{{ route('categories.index') }}" class="nav-link @if(request()->routeIs('categories.*')) active @endif">
-        <i class="nav-icon fas fa-tags"></i>
-        <p>Categories</p>
-    </a>
-</li>
+                {{-- Categories (ক্যাটেগরি) মডিউল --}}
+                <li class="nav-item">
+                    {{-- route('categories.index') ব্যবহার করা হয়েছে --}}
+                    <a href="{{ route('categories.index') }}"
+                        class="nav-link @if(request()->routeIs('categories.*')) active @endif">
+                        <i class="nav-icon fas fa-tags"></i>
+                        <p>Categories</p>
+                    </a>
+                </li>
 
 
 
-{{-- Expenses (খরচ) মডিউল --}}
-<li class="nav-item">
-    {{-- route('expenses.index') ব্যবহার করা হয়েছে --}}
-    <a href="{{ route('expenses.index') }}" class="nav-link @if(request()->routeIs('expenses.*')) active @endif">
-        <i class="nav-icon fas fa-file-invoice-dollar"></i>
-        <p>Expenses</p>
-    </a>
-</li>
+                {{-- Expenses (খরচ) মডিউল --}}
+                <li class="nav-item">
+                    {{-- route('expenses.index') ব্যবহার করা হয়েছে --}}
+                    <a href="{{ route('expenses.index') }}"
+                        class="nav-link @if(request()->routeIs('expenses.*')) active @endif">
+                        <i class="nav-icon fas fa-file-invoice-dollar"></i>
+                        <p>Expenses</p>
+                    </a>
+                </li>
 
 
-{{-- Expense Categories (খরচের ক্যাটেগরি) মডিউল --}}
-<li class="nav-item">
-    {{-- route('expense_categories.index') ব্যবহার করা হয়েছে --}}
-    <a href="{{ route('expense_categories.index') }}" class="nav-link @if(request()->routeIs('expense_categories.*')) active @endif">
-        <i class="nav-icon fas fa-folder-open"></i>
-        <p>Expense Categories</p>
-    </a>
-</li>
+                {{-- Expense Categories (খরচের ক্যাটেগরি) মডিউল --}}
+                <li class="nav-item">
+                    {{-- route('expense_categories.index') ব্যবহার করা হয়েছে --}}
+                    <a href="{{ route('expense_categories.index') }}"
+                        class="nav-link @if(request()->routeIs('expense_categories.*')) active @endif">
+                        <i class="nav-icon fas fa-folder-open"></i>
+                        <p>Expense Categories</p>
+                    </a>
+                </li>
 
 
+                {{-- Migration Logs (মাইগ্রেশন লগ) মডিউল --}}
+                <li class="nav-item">
+                    {{-- route('migration_logs.index') ব্যবহার করা হয়েছে --}}
+                    <a href="{{ route('migration_logs.index') }}"
+                        class="nav-link @if(request()->routeIs('migration_logs.*')) active @endif">
+                        <i class="nav-icon fas fa-history"></i> {{-- History icon for logs --}}
+                        <p>Migration Logs</p>
+                    </a>
+                </li>
 
 
-
-{{-- সিস্টেম সেটিংস মডিউল --}}
-<li class="nav-item">
-    <a href="{{ route('settings.index') }}" class="nav-link @if(request()->routeIs('settings.*')) active @endif">
-        <i class="nav-icon fas fa-cog"></i>
-        <p>System Settings</p>
-    </a>
-</li>
+                {{-- সিস্টেম সেটিংস মডিউল --}}
+                <li class="nav-item">
+                    <a href="{{ route('settings.index') }}"
+                        class="nav-link @if(request()->routeIs('settings.*')) active @endif">
+                        <i class="nav-icon fas fa-cog"></i>
+                        <p>System Settings</p>
+                    </a>
+                </li>
 
 
 
