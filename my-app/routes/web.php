@@ -7,8 +7,9 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ExpenseCategoryController;
 use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\SettingController;
-use App\Http\Controllers\MigrationLogController;
+use App\Http\Controllers\RoleController;
 
+use App\Http\Controllers\UserController;
 
 
 
@@ -42,6 +43,7 @@ Route::get('settings', [SettingController::class, 'index'])->name('settings.inde
 Route::put('settings', [SettingController::class, 'update'])->name('settings.update');
 // routes/api.php
 
-
-// migration start
-Route::get('/migration-history', [MigrationLogController::class, 'index']);
+// user start
+Route::resource('users', UserController::class);
+// role start
+Route::resource('roles', RoleController::class);

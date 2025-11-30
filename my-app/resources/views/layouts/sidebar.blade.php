@@ -42,7 +42,21 @@
                     </a>
                 </li>
 
+                {{-- Users --}}
+                <li>
+                    <a href="{{ route('users.index') }}"
+                        class="nav-link text-white {{ request()->routeIs('users.*') ? 'active bg-primary' : '' }}">
+                        Users
+                    </a>
+                </li>
 
+                {{-- Roles --}}
+                <li>
+                    <a href="{{ route('roles.index') }}"
+                        class="nav-link text-white {{ request()->routeIs('roles.*') ? 'active bg-primary' : '' }}">
+                        Roles
+                    </a>
+                </li>
 
                 <li class="nav-item">
                     <a href="{{ route('units.index') }}"
@@ -99,15 +113,7 @@
                 </li>
 
 
-                {{-- Migration Logs (মাইগ্রেশন লগ) মডিউল --}}
-                <li class="nav-item">
-                    {{-- route('migration_logs.index') ব্যবহার করা হয়েছে --}}
-                    <a href="{{ route('migration_logs.index') }}"
-                        class="nav-link @if(request()->routeIs('migration_logs.*')) active @endif">
-                        <i class="nav-icon fas fa-history"></i> {{-- History icon for logs --}}
-                        <p>Migration Logs</p>
-                    </a>
-                </li>
+
 
 
                 {{-- সিস্টেম সেটিংস মডিউল --}}
