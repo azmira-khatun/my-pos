@@ -151,7 +151,12 @@
                     Purchases
                 </a>
             </li>
-
+<li class="nav-item">
+                <a class="nav-link {{ request()->routeIs('purchase_returns.*') ? 'active' : '' }}" href="{{ route('purchase_returns.index') }}">
+                    <i class="bi bi-arrow-return-left"></i>
+                    Purchase Returns
+                </a>
+            </li>
 
 
 

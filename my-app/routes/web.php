@@ -20,6 +20,9 @@ use App\Http\Controllers\AdjustedProductController;
 use App\Http\Controllers\PurchaseController;
 use App\Http\Controllers\PurchaseItemController;
 use App\Http\Controllers\PurchasePaymentController;
+use App\Http\Controllers\PurchaseReturnController;
+use App\Http\Controllers\PurchaseReturnItemController;
+use App\Http\Controllers\PurchaseReturnPaymentController;
 
 
 Route::get('/', function () {
@@ -102,3 +105,30 @@ Route::delete('purchase_payments/{purchasePayment}', [PurchasePaymentController:
     ->name('purchase_payments.destroy');
 
 // ... (আপনার অন্য routes, যেমন Route::resource('purchases', PurchaseController::class);)
+
+// purchase return
+
+Route::resource('purchase_returns', PurchaseReturnController::class);
+
+// Purchase Return Item Management Routes
+// store: একটি নির্দিষ্ট রিটার্নের মধ্যে একটি নতুন আইটেম যোগ করা
+Route::post('purchase_returns/{purchaseReturn}/items', [PurchaseReturnItemController::class, 'store'])
+    ->name('purchase_returns.items.store');
+
+// destroy: একটি নির্দিষ্ট আইটেম মুছে ফেলা (PurchaseReturnDetail মডেল আইডি ব্যবহার করে)
+Route::delete('purchase_return_details/{purchaseReturnDetail}', [PurchaseReturnItemController::class, 'destroy'])
+    ->name('purchase_return_details.destroy');
+
+
+
+// Purchase Return Payment Management Routes (Refund/Credit from Supplier)
+// store: একটি নির্দিষ্ট রিটার্নের জন্য একটি নতুন রিফান্ড রেকর্ড করা
+Route::post('purchase_returns/{purchaseReturn}/payments', [PurchaseReturnPaymentController::class, 'store'])
+    ->name('purchase_returns.payments.store');
+
+// destroy: একটি নির্দিষ্ট পেমেন্ট এন্ট্রি মুছে ফেলা (PurchaseReturnPayment মডেল আইডি ব্যবহার করে)
+Route::delete('purchase_return_payments/{purchaseReturnPayment}', [PurchaseReturnPaymentController::class, 'destroy'])
+    ->name('purchase_return_payments.destroy');
+
+// ... (আপনার অন্য routes)
+
